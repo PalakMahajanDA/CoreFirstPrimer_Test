@@ -1,0 +1,19 @@
+﻿============================================== NHLContext ===================================
+
+Enable-Migrations -ContextTypeName NhlContext -MigrationsDirectory Migrations\NHL -----can only run once for second tim e use -Force
+
+add-migration -ConfigurationTypeName CoreFirstPrimer.Migrations.NHL.Configuration "InitialCreate"----need to execute when modal changes with different values in quotes example Secondupdate
+update-database -ConfigurationTypeName CoreFirstPrimer.Migrations.NHL.Configuration   --- can excecute many times data changed
+
+
+
+
+add-migration -ConfigurationTypeName CoreFirstPrimer.Migrations.NHL.Configuration "Secondupdate"
+
+
+============================================== ApplicaionDBContext ===================================
+
+Enable-Migrations -ContextTypeName ApplicationDbContext -MigrationsDirectory Migrations\Identity
+add-migration -ConfigurationTypeName CoreFirstPrimer.Migrations.Identity.Configuration "InitialIdentity"
+update-database -ConfigurationTypeName CoreFirstPrimer.Migrations.Identity.Configuration 
+
